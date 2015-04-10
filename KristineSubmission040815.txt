@@ -47,10 +47,9 @@
 	<input type ="checkbox" id = "termAndService" onchange = "checkTermAndServiceCheckbox();"/>I agree with the term and service <br>
 	<button data-inline = "true", id = "nameSetupPageNextButton", disabled , onclick = "goToTutorial();">next</button>
 
-
 	
-<!--this is the tutorial page-->
 </div><!--this is the end of the name setup page-->
+
 
 <div data-role = "page", id = "tutorialPage1" align = "center"><!--this is a tutorial page-->
 <p>Tutorial</p>
@@ -66,14 +65,9 @@
 
 </div><!--this is the end of tutorial page-->
 
+
 <div data-role="page", id="homePage" align="center"><!--this is the home page-->
 
-	<div class = "topButtons" align="center">
-	<a href="#calling" data-role="button"data-inline="true" <!--text-align="center"-->Fake Call</a>
-	<a href="#" data-role="button"data-inline="true" <!--text-align="center"-->Home</a>
-	<a href="#rightSidePanel" data-role="button"data-inline="true" <!--text-align="center"-->More</a>
-	</div>
-	
 	<a href="#popUp" data-role="button"data-inline="true" text-align="center" onclick="storeMessageValue('emergency'), changeDisplay();">Emergency</a>
 
 	<div align="center">
@@ -85,99 +79,70 @@
 		<!--This is the Others button. Clicking this button would lead to the Others page-->
 	</div>
 
-
-	<div data-role = "panel" id = "rightSidePanel" data-position="right" data-display="push"> <!--this is the side panel on the main page-->
-		<a href = "#settingsMain" data-role = "button" data-inline = "true"> Settings</a><br>
-		<a href = "#resources" data-role = "button" data-inline = "true"> Resources</a>
-		<a href = "#partnersSponsors" data-role = "button" data-inline = "true"> Partners/Sponsors</a>
-		<a href = "#aboutUs" data-role = "button" data-inline = "true"> About us</a>
-		<a href = "#" data-role = "button" data-inline = "true"> Restore Default</a>
+	<div class = "bottomButtons" align="center">
+		<a href="#calling" data-role="button"data-inline="true" <!--text-align="center"-->Call</a>
+		<a href="#" data-role="button"data-inline="true" <!--text-align="center"-->Home</a>
+		<a href="#settings1" data-role="button"data-inline="true" <!--text-align="center"-->Settings</a>
 	</div>
 
 	<a href="#welcomePage" data-role="button" data-inline="true" text-align="center">Back</a>
 
 </div><!--this is the end of the home page-->
 
-<div data-role = "page",  id = "settingsMain" align="center"><!--this is the main settings page-->
-	<div class = "topButtons" align="center">
-	<a href="#calling" data-role="button"data-inline="true" <!--text-align="center"-->Fake Call</a>
-	<a href="#homePage" data-role="button"data-inline="true" <!--text-align="center"-->Home</a>
-	<a href="#rightSidePanel" data-role="button"data-inline="true" <!--text-align="center"-->More</a>
+
+<!-- I don't think we need this fake call page, according to the prototype--> 
+<div data-role="page", id="call" align="center"><!--this is the fake call page-->
+
+	<div align="center"><!--need to fix the buttons-->
+		<a href="#calling" data-role="button" data-inline="true" id = "ATT" onclick="<!--storeButtonValue('ATT');--> "playTheMusic()">ATT</a><br>
+		<a href="#calling" data-role="button" data-inline="true" onclick="storeButtonValue('Breeze'); playTheMusic()">Breeze</a><br>
+		<a href="#calling" data-role="button" data-inline="true" onclick="storeButtonValue('Firefly'); playTheMusic()">Firefly</a><br>
+		<a href="#calling" data-role="button" data-inline="true" onclick="storeButtonValue('JellyBean'); playTheMusic()">Jelly Bean</a><br>
+		<a href="#calling" data-role="button" data-inline="true" onclick="storeButtonValue('Lumia'); playTheMusic()">Lumia</a><br>
+		<a href="#calling" data-role="button" data-inline="true" onclick="storeButtonValue('OverTheHorizon'); playTheMusic()">Over the horizon</a><br>
+		<a href="#calling" data-role="button" data-inline="true" onclick="storeButtonValue('Themos'); playTheMusic()">Themos</a><br>
+		<a href="#calling" data-role="button" data-inline="true" onclick="storeButtonValue('T-mobile'); playTheMusic()">T-mobile</a><br>
+		<a href="#calling" data-role="button" data-inline="true" onclick="storeButtonValue('Verizon'); playTheMusic()">Verizon</a><br>
+		<!--<embed height="50" width="100" src="Breeze.mp3">-->
+		<!--<object height="50" width="100" data="Breeze.mp3">Breeze</object>-->
 	</div>
-	
-	<div>
-		<a href = "#homeScreenSettings" data-role = "button" data-inline = "true">Home screen settings</a><br>
-		<a href = "#fakeCallSettings" data-role = "button" data-inline = "true">Fake call settings</a><br>
-		<a href = "#contactsSettings" data-role = "button" data-inline = "true">Contacts</a><br>
-		<a href = "#" data-role = "button" data-inline = "true">to be named...</a><br>
+
+	<div class = "bottomButtons" align="center">
+		<a href="#" data-role="button"data-inline="true" <!--text-align="center"-->Call</a>
+		<a href="#homePage" data-role="button"data-inline="true" <!--text-align="center"-->Home</a>
+		<a href="#settings1" data-role="button"data-inline="true" <!--text-align="center"-->Settings</a>
 	</div>
-	
-	<div data-role = "panel" id = "rightSidePanel" data-position="right" data-display="push" align = "center"> <!--this is the side panel on the main page-->
-		<a href = "#settingsMain" data-role = "button" data-inline = "true"> Settings</a><br>
-		<a href = "#resources" data-role = "button" data-inline = "true"> Resources</a><br>
-		<a href = "#partnersSponsors" data-role = "button" data-inline = "true"> Partners/Sponsors</a><br>
-		<a href = "#aboutUs" data-role = "button" data-inline = "true"> About us</a><br>
-		<a href = "#" data-role = "button" data-inline = "true"> Restore Default</a><br>
+
+</div><!--this is the end of the fake call page-->
+
+
+
+<div data-role="page", id="calling" align="center"><!--this is the calling page-->
+	<p>This is supposingly be the calling page. Yet I have not figured out how to do it so it is an empty page just for now.</p>
+	<img src = ""> <!--insert fake call image-->
+	<ul id="playMusic">
+	</ul>
+	<a href="#homePage" data-role="button" data-inline="true"></a><br>  <!--Button should be a long bar near the buttons on image--> 
+</div><!--This is the end of the calling page-->
+
+
+<div data-role="page", id="settingsMain" align="center"><!--This is the settings main page-->
+
+	<div align="center">
+		<a href="#settingsCall" data-role="button" data-inline="true">Fake Call Settings</a>
 	</div>
-</div><!--this is the end of the main settings page-->
 
-<div data-role = "page", id = "resources" align = "center"><!--this is the resources page-->
-	<p>this is a page</p>
-</div><!--this is the end of the resources page-->
-
-<div data-role = "page", id = "partnersSponsors", align = "center"><!--this is the partners sponsors page-->
-	<p>this is a page</p>
-</div><!--this is the end of the partners sponsors page-->
-
-<div data-role = "page", id = "aboutUs" align = "center"><!--this is the about us page-->
-	<p>this is a page</p>
-</div><!--this is the end of the about us page-->
-
-<div data-role = "page" id = "homeScreenSettings" align = "center"><!--this is the home screen settings page (msg settings page)-->
-
-	<div class = "topButtons" align = "center">
-	<a href="#calling" data-role="button"data-inline="true" <!--text-align="center"-->Fake Call</a>
-	<a href="#homePage" data-role="button"data-inline="true" <!--text-align="center"-->Home</a>
+	<div class = "bottomButtons" align="center">
+		<a href="#call" data-role="button"data-inline="true"> <!--text-align="center"-->Call</a>
+		<a href="#homePage" data-role="button"data-inline="true"> <!--text-align="center"-->Home</a>
+		<a href="#" data-role="button"data-inline="true"> <!--text-align="center"-->Settings</a>
 	</div>
-	
-	<p> Main Page </p>
-	
-	<div style="width: 100%; overflow: auto;"> <!--this is the big chunk of buttons-->
-		<div style="width: 50%; float: left;" > <!--the group of buttons on the left-->
-		
-			<img  src = "" alt = "Emergency Settings button"><br>
-			
-			<div style = "width: 33%; float: left;"><!--the left most of the bottom three buttons-->
-				<img src = "" alt = "left most">
-			</div>
-			<div style = "width: 33%; float: left;"><!--the middle of the bottom three buttons-->
-				<img src = "" alt = "middle">
-			</div>
-			<div style = "width: 33%; float: left;"><!--the right most of the bottom three buttons-->
-				<img src = "" alt = "right most">
-			</div>
-			<p>this page will look prettier when Rosanna put the images in</p>
-			
-		</div>
-		
-		<div style="margin-left: 50%;">  <!--the group of buttons on the right-->
-			<button>Emergency</button>
-			<button>Drunk driving</button>
-			<button>---------------</button>
-			<button>---------------</button>
-		</div>
-	</div> <!--this is the end of the big chunk of buttons-->
-	
-	<div>
-	<a href = "#settingsMain" data-role = "button" data-inline = "true">Back</a>
-	<a href = "#" data-role = "button" data-inline = "true">Clear</a>
-	<a href = "#settingsMain" data-role = "button" data-inline = "true">Confirm</a>
-	
-	</div>
-	
-</div><!--this is the end of the home screen settings page-->
 
-<div data-role="page" id = "fakeCallSettings" align = "center"> <!--this is the fake call settings page (settings fake call)-->
+</div><!--This is the end of the settings main page-->
+
+<div data-role="page", id="settingsCall" align="center"><!--This is the settings main page-->
+
+
 	<label>Contact Name:</label>
 	<form>
 	<input type="text" name="Contact Name" value="Contact Name"/><br>
@@ -199,65 +164,13 @@
 	
 	<div align="left">
 		<a href="#settingsMain" data-role="button" data-inline="true">Back</a>
-		<button data-inline = "true", id = "clearCallSettings" , onclick = "clearCallSettings();">Clear</button>
-		<button data-inline = "true", id = "confirmCallSettings" , onclick = "confirmCallSettings();">Confirm</button>
-	</div>
-	
+		<button data-inline = "true", id = "clearCallSettings", disabled , onclick = "clearCallSettings();">Clear</button>
+		<button data-inline = "true", id = "confirmCallSettings", disabled , onclick = "confirmCallSettings();">Confirm</button>
 	<div align="right"> 
 	
 	</div>
-</div><!--this is the end of the fake call settings page-->
 
-
-
-<div data-role = "page" id = "contactsSettings" align = "center">
-	<div class = "topButtons" align = "center">
-	<a href="#calling" data-role="button"data-inline="true" <!--text-align="center"-->Fake Call</a>
-	<a href="#homePage" data-role="button"data-inline="true" <!--text-align="center"-->Home</a>
-	</div>
-	
-	
-	<div>
-	<a href = "#settingsMain" data-role = "button" data-inline = "true">Back</a>
-	<a href = "#" data-role = "button" data-inline = "true">Clear</a>
-	<a href = "#settingsMain" data-role = "button" data-inline = "true">Confirm</a>
-	</div>
-</div>
-
-<div data-role="page", id="call" align="center"><!--this is the fake call page-->
-
-	<div align="center"><!--need to fix the buttons-->
-		<a href="#calling" data-role="button" data-inline="true" id = "ATT" onclick="<!--storeButtonValue('ATT');--> "playTheMusic()">ATT</a><br>
-		<a href="#calling" data-role="button" data-inline="true" onclick="storeButtonValue('Breeze'); playTheMusic()">Breeze</a><br>
-		<a href="#calling" data-role="button" data-inline="true" onclick="storeButtonValue('Firefly'); playTheMusic()">Firefly</a><br>
-		<a href="#calling" data-role="button" data-inline="true" onclick="storeButtonValue('JellyBean'); playTheMusic()">Jelly Bean</a><br>
-		<a href="#calling" data-role="button" data-inline="true" onclick="storeButtonValue('Lumia'); playTheMusic()">Lumia</a><br>
-		<a href="#calling" data-role="button" data-inline="true" onclick="storeButtonValue('OverTheHorizon'); playTheMusic()">Over the horizon</a><br>
-		<a href="#calling" data-role="button" data-inline="true" onclick="storeButtonValue('Themos'); playTheMusic()">Themos</a><br>
-		<a href="#calling" data-role="button" data-inline="true" onclick="storeButtonValue('T-mobile'); playTheMusic()">T-mobile</a><br>
-		<a href="#calling" data-role="button" data-inline="true" onclick="storeButtonValue('Verizon'); playTheMusic()">Verizon</a><br>
-		<!--<embed height="50" width="100" src="Breeze.mp3">-->
-		<!--<object height="50" width="100" data="Breeze.mp3">Breeze</object>-->
-	</div>
-
-	<div class = "topButtons" align="center">
-		<a href="#" data-role="button"data-inline="true" <!--text-align="center"-->Call</a>
-		<a href="#homePage" data-role="button"data-inline="true" <!--text-align="center"-->Home</a>
-		<a href="#settings1" data-role="button"data-inline="true" <!--text-align="center"-->Settings</a>
-	</div>
-
-</div><!--this is the end of the fake call page-->
-
-
-
-<div data-role="page", id="calling" align="center"><!--this is the calling page-->
-	<p>This is supposingly be the calling page. Yet I have not figured out how to do it so it is an empty page just for now.</p>
-	<ul id="playMusic">
-	</ul>
-	<a href="#homePage" data-role="button" data-inline="true">Back</a><br>
-</div><!--This is the end of the calling page-->
-
-
+</div><!--This is the end of the fake call settings page-->
 
 <div data-role="page", id="settings1" align="center"><!--This is the settings page-->
 
@@ -272,8 +185,8 @@
 		<button data-inline="true">Submit</button>
 	</div>
 
-	<div class = "topButtons" align="center">
-		<a href="#calling" data-role="button"data-inline="true"> <!--text-align="center"-->Call</a>
+	<div class = "bottomButtons" align="center">
+		<a href="#call" data-role="button"data-inline="true"> <!--text-align="center"-->Call</a>
 		<a href="#homePage" data-role="button"data-inline="true"> <!--text-align="center"-->Home</a>
 		<a href="#" data-role="button"data-inline="true"> <!--text-align="center"-->Settings</a>
 	</div>

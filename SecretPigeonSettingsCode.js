@@ -8,7 +8,5 @@ function checkTermAndServiceCheckbox(){
 }
 
 function goToTutorial(){
-	console.log("going");
 	window.location.href = "#tutorialPage";
-	
 }
