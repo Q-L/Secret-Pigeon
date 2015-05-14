@@ -25,7 +25,7 @@
 		console.log(scenarioName);
 		/*test which scenario is the user setting and store the values under the appropriate variables.*/
 		if (scenarioName == "emergency"){
-			emergencyMessageText = $("#message").val();
+			localStorage.setItem("emergencyMessageText", $("#message").val());
 			emergencyContact1Name = $("#contactName1").val();
 			emergencyContact1Number = $("#contactNumber1").val();
 			emergencyContact2Name = $("#contactName2").val();

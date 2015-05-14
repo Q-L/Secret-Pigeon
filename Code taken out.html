@@ -59,3 +59,17 @@
 		<a href="#scenarioSetup" data-role="button" data-inline="true">Others</a><br>
 	</div>
 </div><!--This is the end of the Settings2 page-->
+
+<div data-role="page", id="scenarioSetup" align="left"><!--This is the start of the scenario setup page-->
+		<p id = "scenarioSetupPageTitle"></p>
+		<div>
+			Contact Name 1: <input type="text" id="contactName1" data-inline="true"><br>
+			Contact Number 1:<input type="text" id="contactNumber1" data-inline="true"><br>
+			Contact Name 2: <input type="text" id="contactName2" data-inline="true"><br>
+			Contact Number 2:<input type="text" id="contactNumber2" data-inline="true"><br>
+			Message: <input type="text" id="message" data-inline="true"><br>
+			<input id = "GPSCheckBox" type="checkbox" name="GPS">Enable Location Service<br>
+		</div>
+		<a href="#homePage" data-role="button" data-inline="true" onclick = "storeMessage();">Save</a>
+		<a href="#homePage" data-role="button" data-inline="true">Cancel</a>	
+	</div><!--This is the end of the scenario setup page-->
